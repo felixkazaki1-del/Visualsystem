@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<header>
+<h1>System Dashboard</h1>
+<nav>
+<button onclick="showTab('alters')">Alters</button>
+<button onclick="showTab('groups')">Groups</button>
+</nav>
+</header>
+
+<main>
+<section id="alters" class="tab active">
+<h2>Alters</h2>
+
+<div class="card">
+<h3>Add Alter</h3>
+<input id="alterName" placeholder="Alter Name">
+<textarea id="alterBio" placeholder="Alter Bio"></textarea>
+<button onclick="addAlter()">Add Alter</button>
+</div>
+
+<div id="alterList"></div>
+</section>
+
+<section id="groups" class="tab">
+<h2>Groups & Subgroups</h2>
+
+<div class="card">
+<h3>Create Group</h3>
+<input id="groupName" placeholder="Group Name">
+<button onclick="addGroup()">Add Group</button>
+</div>
+
+<div id="groupList"></div>
+</section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
